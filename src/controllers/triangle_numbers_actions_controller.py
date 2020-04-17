@@ -8,16 +8,17 @@ class TriangleNumbersActionsController:
         print(str(triangle_number) + ": " + ', '.join(map(str, divisors)))
 
     def print_num_with_divisors_count(self, min_divisors_count):
-        i = 0
+        i = 1
         while True:
-            num = TriangleNumber(i)
+            num = TriangleNumber(i).calculate_number()
             divisors = self._calculate_divisors(num)
             if len(divisors) >= min_divisors_count:
                 print(str(num) + ": " + ', '.join(map(str, divisors)))
                 return
+            i += 1
 
-    def _get_nth_number(self, ordianl) -> int:
-        num = TriangleNumber(ordianl)
+    def _get_nth_number(self, ordinal) -> int:
+        num = TriangleNumber(ordinal)
         return num.calculate_number()
 
     def _calculate_divisors(self, num) -> list:
