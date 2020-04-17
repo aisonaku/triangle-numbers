@@ -1,7 +1,7 @@
 from consolemenu import *
 from consolemenu.items import *
 
-from controllers.triangle_numbers_actions_controller import TriangleNumbersActionsController
+from triangle_numbers_app.controllers.triangle_numbers_actions_controller import TriangleNumbersActionsController
 
 class Menu:
     def __init__(self):
@@ -31,17 +31,17 @@ class Menu:
                 self.screen.println("Ordinal should be a natural number")
         except ValueError:
             self.screen.println("Natural number is expected")
-        self.screen.input("Press [Enter] to continue")
+        self.screen.input("Press [Enter] to continue\n")
 
     def second_option_action(self):
         try:
             n = int(self.screen.input("Give minimum number of divisors triangle number should have?\n"))
-            if n >= 2:
+            if n >= 1:
                 controller = TriangleNumbersActionsController()
                 controller.print_num_with_divisors_count(n)
             else:
-                self.screen.println("There are no triangle numbers with less than 2 divisors")
+                self.screen.println("There are no triangle numbers with less than 1 divisor")
         except ValueError:
             self.screen.println("Natural number is expected")
-        self.screen.input("Press [Enter] to continue")
+        self.screen.input("Press [Enter] to continue\n")
 

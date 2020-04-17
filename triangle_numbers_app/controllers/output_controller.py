@@ -1,5 +1,5 @@
 import os
-from models.file import File
+from triangle_numbers_app.models.file import File
 
 class OutputController:
     def __init__(self, results_dir="results"):

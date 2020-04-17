@@ -1,0 +1,5 @@
+#!/usr/bin/env python
+
+from triangle_numbers_app.views.menu import Menu
+
+Menu().initialize()
