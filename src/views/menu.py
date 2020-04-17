@@ -8,10 +8,9 @@ class Menu:
         self.screen = Screen()
 
     def initialize(self):
-        menu = ConsoleMenu("Main Menu", "", self.screen)
+        menu = ConsoleMenu("Main Menu", "", self.screen, show_exit_option=False)
         first_option = FunctionItem("Show all divisors for the triangle number ", self.first_option_action, menu=menu)
         second_option = FunctionItem("Find the first triangle number with over N number of divisors", self.second_option_action, menu=menu)
-
 
         # Add all the items to the root menu
         menu.append_item(first_option)

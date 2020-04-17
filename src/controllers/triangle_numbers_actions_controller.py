@@ -1,11 +1,11 @@
-import time
 from models.triangle_number import TriangleNumber
+from controllers.output_controller import OutputController
 
 class TriangleNumbersActionsController:
     def print_all_nth_number_divisors(self, ordinal):
-        triangle_number = self._get_nth_number(ordinal)
-        divisors = self._calculate_divisors(triangle_number)
-        print(str(triangle_number) + ": " + ', '.join(map(str, divisors)))
+        num = self._get_nth_number(ordinal)
+        divisors = self._calculate_divisors(num)
+        OutputController().output_result(num, divisors, 1, ordinal)
 
     def print_num_with_divisors_count(self, min_divisors_count):
         i = 1
@@ -13,7 +13,7 @@ class TriangleNumbersActionsController:
             num = TriangleNumber(i).calculate_number()
             divisors = self._calculate_divisors(num)
             if len(divisors) >= min_divisors_count:
-                print(str(num) + ": " + ', '.join(map(str, divisors)))
+                OutputController().output_result(num, divisors, 2, min_divisors_count)
                 return
             i += 1
 
