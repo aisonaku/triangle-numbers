@@ -6,7 +6,7 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-cloudsetupservice = {editable = true,extras = ["dev", "test"],path = "."}
+triangle-numbers-app = {editable = true,extras = ["dev", "test"],path = "."}
 
 [requires]
 python_version = "3.7"

@@ -8,7 +8,7 @@ class Menu:
         self.screen = Screen()
 
     def initialize(self):
-        menu = ConsoleMenu("Main Menu", "", self.screen)
+        menu = ConsoleMenu("Highly Divisible Triangle Number", "", self.screen)
         first_option = FunctionItem("Show all divisors for the triangle number ", self.first_option_action, menu=menu)
         second_option = FunctionItem("Find the first triangle number with over N number of divisors", self.second_option_action, menu=menu)
 
