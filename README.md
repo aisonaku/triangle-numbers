@@ -26,3 +26,4 @@ Run command and follow the instructions of the menu
 ```bash
 triangle_numbers_app
 ```
+Results may be found in `pwd`/results directory
